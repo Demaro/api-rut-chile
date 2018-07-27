@@ -25,7 +25,7 @@ SECRET_KEY = 'rxtihd*_$ro3-1@uyue@uk8dkaf@5w%-e(as8nn$3smc2u6%yg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'api_bots.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd559tp23sk331h',
+        'USER': 'nghirutcutzlwx',
+        'PASSWORD': '098f0214f58aaac3c745420a7d8d5c8397cadcb71ce715ea50250744e6397475',
+        'HOST': 'ec2-54-83-203-198.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -105,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-mx'
 
 TIME_ZONE = 'UTC'
 
@@ -120,3 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'static'
+
+
+STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
