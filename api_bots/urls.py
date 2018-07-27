@@ -24,6 +24,6 @@ from api_rut.api.views import PersonaListarAPI
 
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	url(r'^$', include('api_rut.api.urls')),
+	url(r'^', include('api_rut.api.urls')),
 ]
 
